@@ -339,7 +339,7 @@ class _DinningPageState extends State<DinningPage> {
                   decoration: ShapeDecoration(
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),
                       side: BorderSide(width: 0.25, color: Color(0xFFECECEC)),),
-                      image: DecorationImage(image: AssetImage("assets/icons/image3.jpeg"),
+                      image: DecorationImage(image: AssetImage("assets/icons/image16.jpeg"),
                       fit: BoxFit.cover,
                       ),
                   ),
@@ -356,7 +356,7 @@ class _DinningPageState extends State<DinningPage> {
                     decoration: ShapeDecoration(
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),
                         side: BorderSide(width: 0.25, color: Color(0xFFECECEC)),),
-                      image: DecorationImage(image: AssetImage("assets/icons/image4.jpeg"),
+                      image: DecorationImage(image: AssetImage("assets/icons/image17.jpeg"),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -373,7 +373,7 @@ class _DinningPageState extends State<DinningPage> {
                     decoration: ShapeDecoration(
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),
                         side: BorderSide(width: 0.25, color: Color(0xFFECECEC)),),
-                      image: DecorationImage(image: AssetImage("assets/icons/image5.jpeg"),
+                      image: DecorationImage(image: AssetImage("assets/icons/image18.jpg"),
                         fit: BoxFit.cover,
                       ),
                     ),
