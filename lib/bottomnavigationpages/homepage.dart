@@ -61,9 +61,23 @@ import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
     mainPageC1() {
       return Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          gradient: LinearGradient(colors: [Color(0xFF392D69), Color(0xFFB57BEE)],)
+        width: 343,
+        padding: const EdgeInsets.only(
+          top: 20,
+          left: 20,
+          right: 42,
+          bottom: 20,
+        ),
+        clipBehavior: Clip.antiAlias,
+        decoration: ShapeDecoration(
+          gradient: LinearGradient(
+            begin: Alignment(-1.00, 0.00),
+            end: Alignment(1, 0),
+            colors: [Color(0xFF392D69), Color(0xFFB57BEE)],
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -135,7 +149,7 @@ import 'package:lite_rolling_switch/lite_rolling_switch.dart';
           Container(
             width: 75,
             height: 24,
-            padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 1, vertical: 5),
             decoration: ShapeDecoration(
               shape: RoundedRectangleBorder(
                 side: BorderSide(width: 0.25, color: Colors.white),
@@ -325,7 +339,7 @@ import 'package:lite_rolling_switch/lite_rolling_switch.dart';
                   blurRadius: 10,
                   offset: Offset(0, 4),
                   spreadRadius: 0,
-                )
+                ),
               ],
             ),
             child: Container(
