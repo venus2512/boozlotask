@@ -125,7 +125,7 @@ class _VenderRouteState extends State<VenderRoute> {
               height: 127.62,
               clipBehavior: Clip.antiAlias,
               decoration: BoxDecoration(),
-              child: Image.asset("assets/icons/image20.jpeg",fit: BoxFit.fill,
+              child: Image.asset("assets/icons/image24.png",fit: BoxFit.fill,
 
               ),
             ),
@@ -355,7 +355,10 @@ class _VenderRouteState extends State<VenderRoute> {
                 fontSize: 26,
                 fontFamily: 'Urbanist',
                 fontWeight: FontWeight.w700,),),
-              Icon(Icons.monitor_heart,color: Colors.red,)
+              Container(
+                height: 30,
+                width: 30,
+                child: Image.asset("assets/icons/image23.png",fit: BoxFit.fill,),),
             ],
           ),
           Text("teetotallers E-Retail Private limitted",style: TextStyle(color: Color(0xFF4776E6),
