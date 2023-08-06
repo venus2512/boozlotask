@@ -29,9 +29,9 @@ class _SettingsPageState extends State<SettingsPage> {
           fifthPage12(),
           fifthPage13(),
           Divider(
-            height: 3,
-            thickness: 3,
-            color: Colors.grey,
+            height: 5,
+            thickness: 1,
+            color: Color(0xFF4776E6),
           ),
           fifthPage14(),
           fifthPage15(),
@@ -58,9 +58,15 @@ class _SettingsPageState extends State<SettingsPage> {
       children: [
         TextButton(onPressed: (){
           Navigator.push(context, MaterialPageRoute(builder: (context) => VenderRoute(),),);
-        }, child: Text(" < vender",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.red,backgroundColor: Colors.grey),),),
-        Text("Boozler",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w500),),
-        IconButton(onPressed: (){}, icon: Icon (Icons.settings),color: Colors.red),
+        }, child: Text(" < vender",style: TextStyle(color: Colors.white,
+          fontSize: 12,
+          fontFamily: 'Avenir',
+          fontWeight: FontWeight.w900,),),),
+        Text("Boozler",style: TextStyle(color: Colors.white,
+          fontSize: 16,
+          fontFamily: 'Urbanist',
+          fontWeight: FontWeight.w700,),),
+        IconButton(onPressed: (){}, icon: Icon (Icons.settings),color: Colors.white),
       ],
     ),
     );
@@ -73,49 +79,120 @@ class _SettingsPageState extends State<SettingsPage> {
     child: Column(
       children: [
         Container(
-          margin: EdgeInsets.all(3.5),
-          padding: EdgeInsets.only(left: 10),
+          width: 230,
           height: 350,
-          width: 250,
-          decoration: BoxDecoration(
-              border: Border.all(),
-              borderRadius: BorderRadius.circular(5),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.greenAccent.withOpacity(1.0),
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset: Offset(0, 3)
-              ),
-            ]
+          padding: const EdgeInsets.all(16),
+          decoration: ShapeDecoration(
+            color: Color(0x331A1A1A),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Row(
                 children: [
                   Icon(Icons.batch_prediction),
-                  Text("Rookie"),
+                  Text("Rookie",textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white.withOpacity(0.5),
+                      fontSize: 12,
+                      fontFamily: 'Avenir',
+                      fontWeight: FontWeight.w500,
+                    ),),
                   Spacer(),
-                  ElevatedButton(onPressed: (){}, child: Text("Edit Profile",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 10),),),
+                  Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4.50),
+                      decoration: ShapeDecoration(
+                        color: Color(0x3F111111),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
+                        shadows: [
+                          BoxShadow(
+                            color: Color(0x7F000000),
+                            blurRadius: 6,
+                            offset: Offset(1.50, 3),
+                            spreadRadius: 0,
+                          ),BoxShadow(
+                            color: Color(0x4C9F9F9F),
+                            blurRadius: 3,
+                            offset: Offset(-1.50, -1.50),
+                            spreadRadius: 0,
+                          )
+                        ],
+                      ),
+                      child: ElevatedButton(onPressed: (){}, child: Text("Edit Profile",style: TextStyle(color: Colors.white,
+                        fontSize: 7.50,
+                        fontFamily: 'Urbanist',
+                        fontWeight: FontWeight.w700,),),)),
                 ],
               ),
-              Image.asset("assets/icons/image8.jpeg",
-                height: 160,
-                width: 200,
+              Container(
+                width: 127.62,
+                height: 127.62,
+                clipBehavior: Clip.antiAlias,
+                decoration: BoxDecoration(),
+                child: Image.asset("assets/icons/image8.jpeg",fit: BoxFit.fill,
+
+                ),
               ),
-              Text("Anurag Singh",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w400,color: Colors.white),),
+              Text("Anurag Singh",textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontFamily: 'Avenir',
+                    fontWeight: FontWeight.w500,
+                  ),),
               Row(
                 children: [
-                  Icon(Icons.price_change),
-                  Text("2,680",style: TextStyle(fontSize: 15),),
+                  Icon(Icons.price_change,color: Colors.yellow,),
+                  Text("2,680",textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Color(0xFFFFD702),
+                      fontSize: 10,
+                      fontFamily: 'Urbanist',
+                      fontWeight: FontWeight.w700,
+                    ),),
                   Spacer(),
-                  Icon(Icons.movie),
-                  Text("2",style: TextStyle(fontSize: 15),),
-
+                  Icon(Icons.movie,color: Colors.purple,),
+                  Text("2",textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 10,
+                      fontFamily: 'Urbanist',
+                      fontWeight: FontWeight.w700,
+                    ),),
                 ],
               ),
-              ElevatedButton(onPressed: (){}, child: Text("Get Verified",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 10),),),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4.50),
+                decoration: ShapeDecoration(
+                  color: Color(0x3F111111),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
+                  shadows: [
+                    BoxShadow(
+                      color: Color(0x7F202020),
+                      blurRadius: 6,
+                      offset: Offset(1.50, 3),
+                      spreadRadius: 0,
+                    ),BoxShadow(
+                      color: Color(0x4C868686),
+                      blurRadius: 3,
+                      offset: Offset(-1.50, -1.50),
+                      spreadRadius: 0,
+                    )
+                  ],
+                ),
+                child: ElevatedButton(onPressed: (){}, child: Text("Get Verified",textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 9,
+                    fontFamily: 'Urbanist',
+                    fontWeight: FontWeight.w700,
+                  ),),),
+              ),
             ],
           ),
         ),
@@ -124,71 +201,62 @@ class _SettingsPageState extends State<SettingsPage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
-              margin: EdgeInsets.all(3.5),
-              height: 50,
-              width: 90,
-              decoration: BoxDecoration(
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(5),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.indigoAccent.withOpacity(1.0),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset: Offset(0, 3)
-                    ),
-                  ]
-              ),
+              width: 100,
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+              clipBehavior: Clip.antiAlias,
+              decoration: ShapeDecoration(
+                color: Color(0x4C2F2F2F),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),),
               child: Column(
                 children: [
                   Icon(Icons.add),
-                  Text("Friends"),
+                  Text("Friends",textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontFamily: 'Avenir',
+                      fontWeight: FontWeight.w500,
+                    ),),
                 ],
               ),
             ),
             Container(
-              margin: EdgeInsets.all(3.5),
-              height: 50,
-              width: 90,
-              decoration: BoxDecoration(
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(5),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.indigoAccent.withOpacity(1.0),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset: Offset(0, 3)
-                    ),
-                  ]
-              ),
+              width: 100,
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+              clipBehavior: Clip.antiAlias,
+              decoration: ShapeDecoration(
+                color: Color(0x4C2F2F2F),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),),
               child: Column(
                 children: [
                   Icon(Icons.add),
-                  Text("Artist"),
+                  Text("Artist",textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontFamily: 'Avenir',
+                      fontWeight: FontWeight.w500,
+                    ),),
                 ],
               ),
             ),
             Container(
-              margin: EdgeInsets.all(3.5),
-              height: 50,
-              width: 90,
-              decoration: BoxDecoration(
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(5),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.indigoAccent.withOpacity(1.0),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset: Offset(0, 3)
-                    ),
-                  ]
-              ),
+              width: 100,
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+              clipBehavior: Clip.antiAlias,
+              decoration: ShapeDecoration(
+                color: Color(0x4C2F2F2F),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),),
               child: Column(
                 children: [
                   Icon(Icons.add),
-                  Text("Venues"),
+                  Text("Venues",textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontFamily: 'Avenir',
+                      fontWeight: FontWeight.w500,
+                    ),),
                 ],
               ),
             ),
@@ -204,25 +272,45 @@ class _SettingsPageState extends State<SettingsPage> {
   fifthPage13(){
     return Padding(padding: EdgeInsets.all(10),
     child: Container(
-      height: 100,
-      width: 300,
-      decoration: BoxDecoration(
-        border: Border.all(),
-        borderRadius: BorderRadius.circular(5),
-      ),
+    width: 349,
+    height: 124,
+    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 30),
+    decoration: ShapeDecoration(
+    shape: RoundedRectangleBorder(
+    side: BorderSide(width: 1, color: Color(0xFF4776E6)),
+    borderRadius: BorderRadius.circular(20),
+    ),),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text("Reward Streak",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w400,color: Colors.white),),
+              Text("Reward Streak",textAlign: TextAlign.center,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 16,
+          fontFamily: 'Urbanist',
+          fontWeight: FontWeight.w700,),),SizedBox(width: 26,),
+              Icon(Icons.stream,color: Colors.green,),
+              Icon(Icons.stream,color: Colors.green,),
               Icon(Icons.stream),
               Icon(Icons.stream),
-              Icon(Icons.stream),
-              Icon(Icons.stream),
+              SizedBox(width: 16,),
             ],
           ),
-          Text("Continue Streak to eaarn Rewards on bookings. Your first drink is on us! Going out never rewarded like this."),
+          Padding(
+            padding: const EdgeInsets.only(top: 8),
+            child: Text("Continue Streak to eaarn Rewards on bookings. Your first drink is on us! Going out never rewarded like this.",style: TextStyle(
+              color: Colors.white.withOpacity(0.25),
+              fontSize: 13,
+              fontFamily: 'Antipasto Pro',
+              fontWeight: FontWeight.w500,
+              height: 1,
+            ),),
+          ),
         ],
       ),
     ),
@@ -234,118 +322,174 @@ class _SettingsPageState extends State<SettingsPage> {
   fifthPage14(){
     return Padding(padding: EdgeInsets.only(top: 10,right: 20),
     child: Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Address Book",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 25,color: Colors.white),),
-            Text("Share, Edit & Add New Address",style: TextStyle(fontSize: 15),),
+            Text("Address Book",style: TextStyle( color: Colors.white, fontSize: 18, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
+            Text("Share, Edit & Add New Address",style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 10, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
           ],
         ),
         Divider(
-          height: 3,
-          thickness: 3,
-          color: Colors.grey,
+          height: 5,
+          thickness: 1,
+          color: Color(0xFF4776E6),
         ),
         Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Favourites",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 25,color: Colors.white),),
-            Text("a cohesive list of  your selected places, events & parties",style: TextStyle(fontSize: 15),),
+            Text("Favourites",style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
+            Text("a cohesive list of  your selected places, events & parties",style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 10, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
           ],
         ),
         Divider(
-          height: 3,
-          thickness: 3,
-          color: Colors.grey,
+          height: 5,
+          thickness: 1,
+          color: Color(0xFF4776E6),
         ),
         Row(
           children: [
             Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Payments & Refunds",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 25,color: Colors.white),),
-                Text("Refund Staus & Payment Modes",style: TextStyle(fontSize: 15),),
+                Text("Payments & Refunds",style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
+                Text("Refund Staus & Payment Modes",style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 10, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
               ],
             ),
             IconButton(onPressed: (){}, icon: Icon (Icons.arrow_forward_ios_sharp),),
           ],
         ),
         Divider(
-          height: 3,
-          thickness: 3,
-          color: Colors.grey,
+          height: 5,
+          thickness: 1,
+          color: Color(0xFF4776E6),
         ),
         Row(
           children: [
             Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Refer & Earn",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 23,color: Colors.white),),
-                Text("Refer a friend & get upto"
-                    "500 off on your bill payments",style: TextStyle(fontSize: 12),),
+                Text("Refer & Earn",style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
+                Text("Refer a friend & get upto 500 off on your bill payments",style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 10, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
               ],
             ),
-            IconButton(onPressed: (){}, icon: Icon (Icons.arrow_forward_ios_sharp),),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Container(
+                width: 50,
+                height: 50,
+                clipBehavior: Clip.antiAlias,
+                decoration: BoxDecoration(),
+                child: IconButton(onPressed: (){}, icon: Icon (Icons.keyboard_arrow_right_sharp),),
+              ),
+            ),
           ],
         ),
         Divider(
-          height: 3,
-          thickness: 3,
-          color: Colors.grey,
+          height: 5,
+          thickness: 1,
+          color: Color(0xFF4776E6),
         ),
         Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("1% Club",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 25,color: Colors.orange),),
-            Text("Coming Soon",style: TextStyle(fontSize: 15),),
+            Text("1% Club",style: TextStyle(color: Colors.orange, fontSize: 18, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
+            Text("Coming Soon",style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 10, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
           ],
         ),
         Divider(
-          height: 3,
-          thickness: 3,
-          color: Colors.grey,
+          height: 5,
+          thickness: 1,
+          color: Color(0xFF4776E6),
         ),
         Row(
           children: [
             Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Help",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 25,color: Colors.white),),
-                Text("FAQs & Links",style: TextStyle(fontSize: 15),),
+                Text("Help",style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
+                Text("FAQs & Links",style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 10, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
               ],
             ),
-            IconButton(onPressed: (){}, icon: Icon (Icons.keyboard_arrow_up_sharp),),
-          ],
-        ),
-        Divider(
-          height: 3,
-          thickness: 3,
-          color: Colors.grey,
-        ),
-        Row(
-          children: [
-            Column(
-              children: [
-                Text("Terms & Conditions ",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 25,color: Colors.white),),
-              ],
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Container(
+                width: 50,
+                height: 50,
+                clipBehavior: Clip.antiAlias,
+                decoration: BoxDecoration(),
+                child: IconButton(onPressed: (){}, icon: Icon (Icons.keyboard_arrow_right_sharp),),
+              ),
             ),
-            IconButton(onPressed: (){}, icon: Icon (Icons.keyboard_arrow_right_sharp),),
           ],
         ),
         Row(
           children: [
             Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Notifications",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 25,color: Colors.white),),
-                Text("Share, Edit & Add New Addresses",style: TextStyle(fontSize: 15),),
+                Text("Terms & Conditions ",style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
               ],
             ),
-            IconButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationRoute(),),);
-            }, icon: Icon (Icons.keyboard_arrow_right_sharp),
-            color: Colors.red),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Container(
+                width: 50,
+                height: 50,
+                clipBehavior: Clip.antiAlias,
+                decoration: BoxDecoration(),
+                child: IconButton(onPressed: (){}, icon: Icon (Icons.keyboard_arrow_right_sharp),),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Notifications",style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
+                Text("Share, Edit & Add New Addresses",style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 10, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
+              ],
+            ),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Container(
+                width: 50,
+                height: 50,
+                clipBehavior: Clip.antiAlias,
+                decoration: BoxDecoration(),
+                child: IconButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationRoute(),),);
+                }, icon: Icon (Icons.keyboard_arrow_right_sharp),
+                    color: Colors.red),
+              ),
+            ),
           ],
         ),
         Divider(
-          height: 3,
-          thickness: 3,
-          color: Colors.grey,
+          height: 5,
+          thickness: 1,
+          color: Color(0xFF4776E6),
         ),
       ],
     ),
@@ -358,9 +502,24 @@ class _SettingsPageState extends State<SettingsPage> {
     return Padding(padding: EdgeInsets.all(50),
     child: Column(
       children: [
-        Text("Log Out",style: TextStyle(color: Colors.red,fontSize: 15,fontWeight: FontWeight.w400),),
-        Text("Made With Love",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),),
-        Text("teetotallers E-Retail Private limitted",style: TextStyle(color: Colors.purple,fontSize: 15),),
+        Text("Log Out",style: TextStyle(color: Color(0xFF970000),
+          fontSize: 14,
+          fontFamily: 'Urbanist',
+          fontWeight: FontWeight.w700,),),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Made With ",style: TextStyle(  color: Colors.white,
+              fontSize: 26,
+              fontFamily: 'Urbanist',
+              fontWeight: FontWeight.w700,),),
+            Icon(Icons.monitor_heart,color: Colors.red,)
+          ],
+        ),
+        Text("teetotallers E-Retail Private limitted",style: TextStyle(color: Color(0xFF4776E6),
+          fontSize: 12,
+          fontFamily: 'Urbanist',
+          fontWeight: FontWeight.w700,),),
       ],
     ),
     );

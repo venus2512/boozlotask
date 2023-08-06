@@ -54,10 +54,10 @@ class _TicketsPageState extends State<TicketsPage> {
     return Padding(padding: EdgeInsets.all(10),
       child: Column(
         children: [
-          Text("Tickets & Inclusions", style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),),
+          Text("Tickets & Inclusions", style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
           Divider(
             thickness: 3,
-            color: Colors.grey,
+            color: Color(0xFF4776E6),
           ),
         ],
       ),
@@ -69,39 +69,85 @@ class _TicketsPageState extends State<TicketsPage> {
   fourthPage1(){
     return Padding(padding: EdgeInsets.all(10),
     child: Container(
-      height: 200,
-      width: 400,
-      color: Colors.white70,
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      clipBehavior: Clip.antiAlias,
+      decoration: ShapeDecoration(
+        color: Color(0x7F2F2F2F),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+      ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Stag - Boys",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 35),),
+          Text("Stag - Boys",style: TextStyle(color: Colors.white,
+            fontSize: 16,
+            fontFamily: 'Urbanist',
+            fontWeight: FontWeight.w700,),),
           Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   RichText(text: TextSpan(
-                    text: "  @4000",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+                    text: "₹4000  | ",style: TextStyle(color: Colors.white, fontSize: 14, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),
                     children:[
-                      TextSpan(
-                        text: "  3 Available",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600,color: Colors.green),
+                      TextSpan(text: "  3 Available",style: TextStyle(color: Color(0xFF16BD3B), fontSize: 14, fontFamily: 'Urbanist', fontWeight: FontWeight.w500,),
                       ),
                     ]
-                  )),
-                  Divider(
-                    height: 5,
-                    thickness: 3,
-                    indent: 25,
-                    endIndent: 45,
-                    color: Colors.black,
-                  ),
-                  ElevatedButton(onPressed: (){}, child: Text("Add +",style: TextStyle(fontWeight: FontWeight.w400,color: Colors.white),),
+                  ),),
+                  Opacity(opacity: 0.50,
+                    child: Container(
+                      width: 120,
+                      decoration: ShapeDecoration(
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                            width: 0.50,
+                            strokeAlign: BorderSide.strokeAlignCenter,
+                            color: Color(0xFF4776E6),
+                          ),
+                        ),
+                      ),
+                    ),),
+                  Container(padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                    clipBehavior: Clip.antiAlias,
+                    decoration: ShapeDecoration(
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(width: 0.25, color: Colors.white),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
+                    child: ElevatedButton(onPressed: (){}, child: Text("Add +",style: TextStyle(color: Colors.white, fontSize: 14, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
+                    ),
                   ),
                 ],
               ),
-              Text("Valid for 1 Boozler"),
-              Text("Cancellation Available"),
-              Text("Free Welcome Drink"),
-              Text("Redeemable Cover Charges")
+              Text("Valid for 1 Boozler",style: TextStyle(color: Colors.white.withOpacity(0.5),
+                fontSize: 10,
+                fontFamily: 'Urbanist',
+                fontWeight: FontWeight.w700,),),
+              Text("Cancellation Available",style: TextStyle(
+                color: Colors.white.withOpacity(0.5),
+                fontSize: 10,
+                fontFamily: 'Urbanist',
+                fontWeight: FontWeight.w700,
+              ),),
+              Text(
+                '• Free Welcome Drink!\n• Redeemable Cover Charges',
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.5),
+                  fontSize: 10,
+                  fontFamily: 'Urbanist',
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
             ],
           ),
         ],
@@ -115,39 +161,85 @@ class _TicketsPageState extends State<TicketsPage> {
   fourthPage2(){
     return Padding(padding: EdgeInsets.all(10),
       child: Container(
-        height: 200,
-        width: 400,
-        color: Colors.white70,
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        clipBehavior: Clip.antiAlias,
+        decoration: ShapeDecoration(
+          color: Color(0x7F2F2F2F),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Stag - Girls",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 35),),
+            Text("Stag - Girls",style: TextStyle(color: Colors.white,
+              fontSize: 16,
+              fontFamily: 'Urbanist',
+              fontWeight: FontWeight.w700,),),
             Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     RichText(text: TextSpan(
-                        text: "  @3000",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+                        text: "₹3000  | ",style: TextStyle(color: Colors.white, fontSize: 14, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),
                         children:[
-                          TextSpan(
-                            text: "  Sold Out",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600,color: Colors.green),
+                          TextSpan(text: "  Sold Out",style: TextStyle(color: Color(0xFF16BD3B), fontSize: 14, fontFamily: 'Urbanist', fontWeight: FontWeight.w500,),
                           ),
                         ]
-                    )),
-                    Divider(
-                      height: 5,
-                      thickness: 3,
-                      indent: 25,
-                      endIndent: 70,
-                      color: Colors.black,
-                    ),
-                    ElevatedButton(onPressed: (){}, child: Text("Add +",style: TextStyle(fontWeight: FontWeight.w400,color: Colors.white),),
+                    ),),
+                    Opacity(opacity: 0.50,
+                      child: Container(
+                        width: 120,
+                        decoration: ShapeDecoration(
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide(
+                              width: 0.50,
+                              strokeAlign: BorderSide.strokeAlignCenter,
+                              color: Color(0xFF4776E6),
+                            ),
+                          ),
+                        ),
+                      ),),
+                    Container(padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      clipBehavior: Clip.antiAlias,
+                      decoration: ShapeDecoration(
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(width: 0.25, color: Colors.white),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                      ),
+                      child: ElevatedButton(onPressed: (){}, child: Text("Add +",style: TextStyle(color: Colors.white, fontSize: 14, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
+                      ),
                     ),
                   ],
                 ),
-                Text("Valid for 1 Boozler"),
-                Text("Non Refundable"),
-                Text("Free Welcome Drink"),
-                Text("Redeemable Cover Charges")
+                Text("Valid for 1 Boozler",style: TextStyle(color: Colors.white.withOpacity(0.5),
+                  fontSize: 10,
+                  fontFamily: 'Urbanist',
+                  fontWeight: FontWeight.w700,),),
+                Text("Non Refundable",style: TextStyle(
+                  color: Colors.white.withOpacity(0.5),
+                  fontSize: 10,
+                  fontFamily: 'Urbanist',
+                  fontWeight: FontWeight.w700,
+                ),),
+                Text(
+                  '• Free Welcome Drink!\n• Redeemable Cover Charges',
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.5),
+                    fontSize: 10,
+                    fontFamily: 'Urbanist',
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
               ],
             ),
           ],
@@ -161,39 +253,85 @@ class _TicketsPageState extends State<TicketsPage> {
   fourthPage3(){
     return Padding(padding: EdgeInsets.all(10),
       child: Container(
-        height: 200,
-        width: 400,
-        color: Colors.white70,
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        clipBehavior: Clip.antiAlias,
+        decoration: ShapeDecoration(
+          color: Color(0x7F2F2F2F),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Couple",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 35),),
+            Text("Couple",style: TextStyle(color: Colors.white,
+              fontSize: 16,
+              fontFamily: 'Urbanist',
+              fontWeight: FontWeight.w700,),),
             Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     RichText(text: TextSpan(
-                        text: "  @6000",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+                        text: "₹6000  | ",style: TextStyle(color: Colors.white, fontSize: 14, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),
                         children:[
-                          TextSpan(
-                            text: "  3 Available",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600,color: Colors.green),
+                          TextSpan(text: "  3 - Available",style: TextStyle(color: Color(0xFF16BD3B), fontSize: 14, fontFamily: 'Urbanist', fontWeight: FontWeight.w500,),
                           ),
                         ]
-                    )),
-                    Divider(
-                      height: 5,
-                      thickness: 3,
-                      indent: 25,
-                      endIndent: 45,
-                      color: Colors.black,
-                    ),
-                    ElevatedButton(onPressed: (){}, child: Text("Add +",style: TextStyle(fontWeight: FontWeight.w400,color: Colors.white),),
+                    ),),
+                    Opacity(opacity: 0.50,
+                      child: Container(
+                        width: 100,
+                        decoration: ShapeDecoration(
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide(
+                              width: 0.50,
+                              strokeAlign: BorderSide.strokeAlignCenter,
+                              color: Color(0xFF4776E6),
+                            ),
+                          ),
+                        ),
+                      ),),
+                    Container(padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      clipBehavior: Clip.antiAlias,
+                      decoration: ShapeDecoration(
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(width: 0.25, color: Colors.white),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                      ),
+                      child: ElevatedButton(onPressed: (){}, child: Text("Add +",style: TextStyle(color: Colors.white, fontSize: 14, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
+                      ),
                     ),
                   ],
                 ),
-                Text("Valid for 1 Boozler Couple"),
-                Text("Non Refundable"),
-                Text("Free Welcome Drink for both- The King & The Queen!"),
-                Text("Redeemable Cover Charges")
+                Text("Valid for 1 Boozler",style: TextStyle(color: Colors.white.withOpacity(0.5),
+                  fontSize: 10,
+                  fontFamily: 'Urbanist',
+                  fontWeight: FontWeight.w700,),),
+                Text("Non Refundable",style: TextStyle(
+                  color: Colors.white.withOpacity(0.5),
+                  fontSize: 10,
+                  fontFamily: 'Urbanist',
+                  fontWeight: FontWeight.w700,
+                ),),
+                Text(
+                  '• Free Welcome Drink for both -  The King & The Queen!\n• Redeemable Cover Charges',
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.5),
+                    fontSize: 10,
+                    fontFamily: 'Urbanist',
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
               ],
             ),
           ],
@@ -207,39 +345,85 @@ class _TicketsPageState extends State<TicketsPage> {
   fourthPage4(){
     return Padding(padding: EdgeInsets.all(10),
       child: Container(
-        height: 200,
-        width: 400,
-        color: Colors.white70,
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        clipBehavior: Clip.antiAlias,
+        decoration: ShapeDecoration(
+          color: Color(0x7F2F2F2F),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Silver - Table for 4",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 35),),
+            Text("Silver - Table for 4",style: TextStyle(color: Colors.white,
+              fontSize: 16,
+              fontFamily: 'Urbanist',
+              fontWeight: FontWeight.w700,),),
             Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     RichText(text: TextSpan(
-                        text: "  @12000",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+                        text: "₹12000  | ",style: TextStyle(color: Colors.white, fontSize: 14, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),
                         children:[
-                          TextSpan(
-                            text: "  3 Available",style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600,color: Colors.green),
+                          TextSpan(text: "  3 - Available",style: TextStyle(color: Color(0xFF16BD3B), fontSize: 14, fontFamily: 'Urbanist', fontWeight: FontWeight.w500,),
                           ),
                         ]
-                    )),
-                    Divider(
-                      height: 5,
-                      thickness: 3,
-                      indent: 25,
-                      endIndent: 30,
-                      color: Colors.black,
-                    ),
-                    ElevatedButton(onPressed: (){}, child: Text("Add +",style: TextStyle(fontWeight: FontWeight.w400,color: Colors.white),),
+                    ),),
+                    Opacity(opacity: 0.50,
+                      child: Container(
+                        width: 100,
+                        decoration: ShapeDecoration(
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide(
+                              width: 0.50,
+                              strokeAlign: BorderSide.strokeAlignCenter,
+                              color: Color(0xFF4776E6),
+                            ),
+                          ),
+                        ),
+                      ),),
+                    Container(padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      clipBehavior: Clip.antiAlias,
+                      decoration: ShapeDecoration(
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(width: 0.25, color: Colors.white),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                      ),
+                      child: ElevatedButton(onPressed: (){}, child: Text("Add +",style: TextStyle(color: Colors.white, fontSize: 14, fontFamily: 'Urbanist', fontWeight: FontWeight.w700,),),
+                      ),
                     ),
                   ],
                 ),
-                Text("Valid for 4 Boozler"),
-                Text("Non Refundable"),
-                Text("Free Welcome Drink for both couple"),
-                Text("Redeemable Cover Charges")
+                Text("Valid for 4 Boozler",style: TextStyle(color: Colors.white.withOpacity(0.5),
+                  fontSize: 10,
+                  fontFamily: 'Urbanist',
+                  fontWeight: FontWeight.w700,),),
+                Text("Non Refundable",style: TextStyle(
+                  color: Colors.white.withOpacity(0.5),
+                  fontSize: 10,
+                  fontFamily: 'Urbanist',
+                  fontWeight: FontWeight.w700,
+                ),),
+                Text(
+                  '• Free Welcome Drink for both couple\n• Redeemable Cover Charges',
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.5),
+                    fontSize: 10,
+                    fontFamily: 'Urbanist',
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
               ],
             ),
           ],
@@ -254,21 +438,27 @@ class _TicketsPageState extends State<TicketsPage> {
     return Padding(padding: EdgeInsets.all(15),
     child: Container(
       height: 50,
-      width: 300,
-      decoration: BoxDecoration(
-          border: Border.all(),
-          borderRadius: BorderRadius.circular(5),
-          gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [Colors.blue, Colors.red, Colors.pink, Colors.purple, Colors.orange])
+      width: 350,
+      padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 8),
+      decoration: ShapeDecoration(
+        gradient: LinearGradient(
+          begin: Alignment(0.95, -0.32),
+          end: Alignment(-0.95, 0.32),
+          colors: [Color(0xFF4776E6), Color(0xFF8E54E9)],
+        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Icon(Icons.confirmation_num),
           TextButton(onPressed: (){},
-            child: Text(" Confirm Booking",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 25),),),
+            child: Text(" Confirm Booking",style: TextStyle(color: Colors.white,
+              fontSize: 14,
+              fontFamily: 'Urbanist',
+              fontWeight: FontWeight.w700,),),),
         ],
       ),
     ),
