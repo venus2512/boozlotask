@@ -8,7 +8,6 @@ export 'package:boozlotask/bottomnavigationpages/ticketspage.dart';
 export 'package:boozlotask/bottomnavigationpages/settingspage.dart';
 export 'helper_utils.dart';
 export 'sizebox.dart';
-export 'appBar.dart';
 export 'mainPageC3.dart';
 export 'mainPageC4.dart';
 export 'mainPageC6.dart';
